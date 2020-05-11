@@ -12,10 +12,10 @@ namespace CertificateCollection_teste
     {
         static void Main(string[] args)
         {
-            X509Certificate2 _X509Cert = new X509Certificate2();
-
             try
             {
+                X509Certificate2 _X509Cert = new X509Certificate2();
+
                 X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
                 store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
                 X509Certificate2Collection collection = (X509Certificate2Collection)store.Certificates;
